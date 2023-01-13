@@ -12,7 +12,7 @@ const newSpicyFoods = [
 ];
 
 // Get one random spicy food from the array
-function getNewRandomSpicyFood() {
+function randomSpicyFood() {
   const index = Math.floor(Math.random() * newSpicyFoods.length);
   const newSpicyFood = { ...newSpicyFoods[index] };
   newSpicyFood.id = nextId;
@@ -20,4 +20,8 @@ function getNewRandomSpicyFood() {
   return newSpicyFood;
 }
 
-export { spicyFoods, getNewRandomSpicyFood };
+function getNewSpicyFood() {
+  return randomSpicyFood();
+}
+
+export { spicyFoods, getNewSpicyFood };
